@@ -18,23 +18,23 @@ document.addEventListener("DOMContentLoaded", function() {
     const btnCambiador = document.getElementById('btn-cambiador');
     btnCambiador.addEventListener('click', function() {
         
-        //console.log(parrafoCambiante.style.color);
-        parrafoCambiante.style.color = 'red';
+        const colorActual = parrafoCambiante.style.color
+        parrafoCambiante.style.color = isCambiador(colorActual);
         //console.log(parrafoCambiante.style.color);
 
     });
 
 });
 
-/* function isCambiador(verda) {
+function isCambiador(color) {
 
-    if ( verda ) {
-        return true;
+    if ( color === 'red' ) {
+        return 'blue';
     }
-    return false;
+    return 'red';
 
 }
- */
+
 function saludo(nombre, mensaje, edad) {
     console.log(`Hola ${nombre}, ${mensaje}, edad ${edad}`);
 }
